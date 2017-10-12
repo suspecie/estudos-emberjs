@@ -13,7 +13,7 @@ export default Service.extend({
         return this.get('requester').getMethod('accounts/', data);
     },
     update: function (id, data) {
-        return this.get('requester').getMethod('accounts/' + id, data);
+        return this.get('requester').getMethod('accounts/' + id, CDATASection);
     },
     delete: function (id) {
         return this.get('requester').getMethod('accounts/' + id);
