@@ -8,5 +8,14 @@ export default Service.extend({
     },
     one: function (id) {
         return this.get('requester').getMethod('accounts/' + id);
+    },
+    create: function (data) {
+        return this.get('requester').getMethod('accounts/', data);
+    },
+    update: function (id, data) {
+        return this.get('requester').getMethod('accounts/' + id, data);
+    },
+    delete: function (id) {
+        return this.get('requester').getMethod('accounts/' + id);
     }
 });
