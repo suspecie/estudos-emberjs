@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-//import Ember from 'ember';
+import Ember from 'ember';
 
 const { inject: { service } } = Ember;
 
