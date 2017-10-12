@@ -1,1 +1,14 @@
-{{outlet}}
+<div class="wrapper">
+    <div class="modal">
+        <h1>Editando conta bancária</h1>
+        <form {{ action "save" model on="submit" }}>
+            <div class="input-container">
+                {{ input value=model.title placeholder="Titulo..." }}
+            </div>
+            <input type="submit" value="salvar" class="btn"/>
+            {{#link-to "accounts.view" model.id class="btn"}}
+                voltar
+            {{/link-to}}
+        </form>
+    </div>
+</div>
