@@ -9,6 +9,9 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('accounts', function() {
     this.route('view', {path: 'view/:id'});
+    this.route('edit', {path: 'edit/:id'});
+    this.route('remove', {path: 'remove/:id'});
+    this.route('add');
   });
 });
 
