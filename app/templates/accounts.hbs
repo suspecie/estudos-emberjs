@@ -12,14 +12,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Conta estática <small>Caixa 0888 - 0989819-9</small></td>
-            <td>
-               {{#link-to "accounts.view" 1 class="btn"}}
-                 ver
-               {{/link-to}}
-            </td>
-        </tr>
+        {{#each model as |account|}}
+            <tr>
+                <td>{{ account.id }}</td>
+                <td>{{ account.title }}</td>
+                <td>
+                    {{#link-to "accounts.view" account.id class="btn"}}
+                        ver
+                    {{/link-to}}
+                </td>
+            </tr>
+        {{/each}}
     </tbody>
 </table>
